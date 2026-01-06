@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib  
 
-model = joblib.load("Knn_heart.pkl")
+model = joblib.load("knn_heart.pkl")
 scaler = joblib.load("scaler.pkl")
 excepted_columns = joblib.load("columns.pkl")
 
@@ -60,4 +60,5 @@ if st.button("Predict"):
     if prediction == 1:
         st.error("⚠️ High Risk of Heart Disease")
     else:
+
         st.success("✅ Low Risk of Heart Disease")
